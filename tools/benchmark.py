@@ -40,6 +40,9 @@ def benchmark(func, *args, **kwargs):
     tracemalloc.stop()
 
     runtime_ms = (t1 - t0) * 1000
+    if isinstance(peak, tuple):
+        peak = peak[1]  # Tuple'ın ikinci elemanı genellikle 'peak' değeridir.
+
     peak_memory_mb = peak / 1024 / 1024
 
     return {
