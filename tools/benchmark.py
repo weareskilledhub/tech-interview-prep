@@ -7,7 +7,6 @@ import psutil
 
 def _measure_peak_cpu(stop_event, peak_holder, interval=0.01):
     process = psutil.Process(os.getpid())
-
     process.cpu_percent(interval=None)
 
     while not stop_event.is_set():
@@ -36,7 +35,7 @@ def benchmark(func, *args, **kwargs):
     stop_event.set()
     cpu_thread.join()
 
-    peak = tracemalloc.get_traced_memory()
+    current, peak = tracemalloc.get_traced_memory()
     tracemalloc.stop()
 
     runtime_ms = (t1 - t0) * 1000
