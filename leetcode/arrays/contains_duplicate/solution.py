@@ -12,7 +12,10 @@ def contains_duplicate(nums):
     Returns:
         bool: True if a duplicate exists, otherwise False.
     """
+    return len(nums) > len(set(nums)) # Kümenin boyu, ikinci kümenin boyundan büyükse demek ki bir şeyler silinmiş.
     raise NotImplementedError("Student should implement this solution.")
+
+
 
 
 if __name__ == "__main__":
