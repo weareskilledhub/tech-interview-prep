@@ -1,7 +1,7 @@
 from tools.benchmark import benchmark
 
 
-def longest_consecutive(nums): # o(n) formatında olduğu için set kullanıldı. en başta list yapısın kullanıldı fakat yapo o(n**2) olduğundan set tercih edildi. örnekler küçük sayılarda olduğu için cpu ve ms değerleri birbirine çok yakın. fakat büyük listelerde maliyetin n**2 olarak artacağı anlaşıldı.
+def longest_consecutive(nums): # o(n) formatında olduğu için set kullanıldı. en başta list yapısın kullanıldı fakat yapı o(n**2) olduğundan set tercih edildi. örnekler küçük sayılarda olduğu için cpu ve ms değerleri birbirine çok yakın. fakat büyük listelerde maliyetin n**2 olarak artacağı anlaşıldı.
     if not nums:
         return 0
 
