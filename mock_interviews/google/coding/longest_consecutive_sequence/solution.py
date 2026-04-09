@@ -17,7 +17,7 @@ def longest_consecutive(nums): # o(n) formatında olduğu için set kullanıldı
                 count += 1
                 length += 1
 
-                max_length = max(max_length, length)
+            max_length = max(max_length, length)
 
     return max_length
 
