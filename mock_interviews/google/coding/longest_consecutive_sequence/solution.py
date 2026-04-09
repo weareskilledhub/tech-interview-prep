@@ -1,17 +1,25 @@
 from tools.benchmark import benchmark
 
 
-def longest_consecutive(nums):
-    """
-    Return the length of the longest consecutive elements sequence.
+def longest_consecutive(nums): # o(n) formatında olduğu için set kullanıldı. en başta list yapısın kullanıldı fakat yapo o(n**2) olduğundan set tercih edildi. örnekler küçük sayılarda olduğu için cpu ve ms değerleri birbirine çok yakın. fakat büyük listelerde maliyetin n**2 olarak artacağı anlaşıldı.
+    if not nums:
+        return 0
 
-    Args:
-        nums (list[int]): Unsorted list of integers.
+    num_set = set(nums)
+    max_length = 0
 
-    Returns:
-        int: Length of the longest consecutive sequence.
-    """
-    raise NotImplementedError("Student should implement this solution.")
+    for n in num_set:
+        if n - 1 not in num_set:
+            count = n
+            length = 1
+
+            while count + 1 in num_set:
+                count += 1
+                length += 1
+
+                max_length = max(max_length, length)
+
+    return max_length
 
 
 if __name__ == "__main__":
