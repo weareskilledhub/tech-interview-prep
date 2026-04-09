@@ -1,4 +1,3 @@
-Tabii. Aşağıya `leetcode/arrays/contains_duplicate/README.md` ve `solution.py` için tam içerikleri bırakıyorum.
 
 # Contains Duplicate
 
